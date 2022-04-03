@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <title>DISTRISUR</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <!--Inicio de Cabecera-->
+        <header id="header" class="head">
+            <section>
+                <div class="logo">
+                    <h1><a href="index.html">DISTRISUR</a></h1>
+                </div>
+                <nav class="menu__nav nav">
+                    <ul>
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./pages/la-empresa.html">LA EMPRESA</a></li>
+                        <li><a href="./pages/nuestras-marcas.html">NUESTRAS MARCAS</a></li>
+                        <li><a href="./pages/sucursales.html">SUCURSALES</a></li>
+                        <li><a href="./pages/ingreso-clientes.html">INGRESO CLIENTES</a></li>
+                        <li><a href="./pages/contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <!--Fin de Cabecera-->
+
+        <!--Inicio Articulos-->
+
+        <main class="main">
+            <div class="contenido">
+                <section class="index__descripcion">
+                    <h3>La empresa</h3>
+                    <p>
+                        Somos una empresa distribuidora de las principales marcas de una amplia variedad de artículos 
+                        de consumo masivo. Nuestros servicios se extienden desde el sur de la provincia de Buenos Aires hasta 
+                        Ushuaia. Disponemos de nuestra propia flota de camiones para satisfacer la demanda de 
+                        distribución regional, y administramos las diferentes entregas a los depósitos para el 
+                        traslado de larga distancia a diferentes puntos del país.
+                    </p>
+                    <img id="img__depo1" src="img/depo1.png" alt="depo1">
+                </section>
+                <section class="index__marcas">
+                    <h3>Algunas de nuestras marcas</h3>
+                    <figure id="marcas-logo">
+                        <img class="img__marcas" src="./img/arcor.png" alt="logo-arcor">
+                        <img class="img__marcas" src="./img/Terrabusi.png" alt="logo-terrabusi">
+                        <img class="img__marcas" src="./img/unilever.png" alt="logo-unilever">
+                    </figure>
+                </section>
+
+                <section class="atencion">
+                    <h3>Horarios de atención</h3>
+                    <table border="3px" cellpadding="10px" celloacing="10px">
+                        <tr>
+                            <th>Día</th>
+                            <th>Apertura</th>
+                            <th>Cierre</th>
+                        </tr>
+                        <tr>
+                            <td>Lunes a Viernes</td>
+                            <td>08:30 Hs</td>
+                            <td>20:30 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>09:00 Hs</td>
+                            <td>16:00 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Cerrado</td>
+                        </tr>
+                    </table>
+                    <figure>
+                        <img class="img__contact2" src="./img/contacto-2.png" alt="contacto-2">
+                    </figure>
+                </section>
+            </div>
+            <!--Fin Articulos-->
+
+            <!--INICIO BARRA LATERAL-->
+
+            <aside id="lateral" class="aside">
+
+                <section>
+                    <h3>BUSCAR</h3>
+                    <article id="search">
+                        <form action="#" method="post">
+                            <input type="text" />
+                            <input type="button" value="L" class="icon" />
+                        </form>
+                    </article>
+                </section>
+
+                <h3>LOGIN</h3>
+                <article id="login" class="aside-box">
+                    <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                        <label for="user" type="text" class="icon user">U</label>
+                        <input id="user" type="email" />
+
+                        <label for="password" class="icon password">w</label>
+                        <input id="password" type="password" />
+
+                        <input id="btm" type="submit" value="Entrar" />
+                        <input id="btm" type="reset" value="Limpiar" />
+
+                        <a href="./pages/ingreso-clientes.html">Registrate aquí</a>
+                        <a href="./pages/ingreso-clientes.html">¿Has olvidado la contraseña?</a>
+                    </form>
+                </article>
+
+                <h3>REDES SOCIALES</h3>
+                <article id="social" class="aside-box">
+                    <div class="twitter">
+                        <a href="#" class="icon">t</a>
+                        <p class="overlay">
+                            Twitter
+                        </p>
+                    </div>
+                    <div class="facebook">
+                        <a href="#" class="icon">f</a>
+                        <p class="overlay">
+                            Facebook
+                        </p>
+                    </div>
+                    <div class="youtube">
+                        <a href="#" class="icon">y</a>
+                        <p class="overlay">
+                            YouTube
+                        </p>
+                    </div>
+                </article>
+            </aside>
+
+            <!--Fin de Barra Lateral-->
+
+        </main>
+        <!--Inicio Footer-->
+
+        <footer>
+            <section class="footer clearfix">
+                <nav class="menu__footer">
+                    <h5>MENU</h5>
+                    <ul>
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./pages/la-empresa.html">LA EMPRESA</a></li>
+                        <li><a href="./pages/nuestras-marcas.html">NUESTRAS MARCAS</a></li>
+                        <li><a href="./pages/sucursales.html">SUCURSALES</a></li>
+                        <li><a href="./pages/ingreso-clientes.html">INGRESO CLIENTES</a></li>
+                        <li><a href="./pages/contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+
+                <article class="contacto_footer">
+                    <h5>CONTACTO</h5>
+                    <p>Casa Central</p>
+                    <p>Localidad: Bahia Blanca</p>
+                    <p>Dirección: Ruta 3 km 695,5</p>
+                    <p>Teléfono:+542915555225</p>
+                    <p>Email:atencionalcliente@distrisur.com.ar</p>
+                </article>
+
+                <div class="location_footer">
+                    <h5>¿DONDE ESTAMOS?</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1100.7222136659598!2d-62.32836242016949!3d-38.71063223131799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1646577299565!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+        </footer>
+
+        <!--Fin Footer-->
+    </div>
+</body>
+
+</html>
