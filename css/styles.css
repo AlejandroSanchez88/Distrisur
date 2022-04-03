@@ -29,7 +29,7 @@
 *{
     margin: 0rem;
     padding: 0rem;
-    font-size: 62.5%;
+    /*font-size: 62.5%;*/
     /*border: red dotted 1px;*/
 }
 
@@ -54,7 +54,7 @@ grid-area:
     width: 100%;
     grid-template-columns: 75% 25%;
     grid-template-rows: auto auto auto auto;
-    grid-gap: 1.5rem;
+    grid-gap: 15px;
 }
 
 .clearfix{
@@ -69,17 +69,17 @@ grid-area:
     grid: head;
     width: 100%;
     text-align: center;
-    padding: 2rem;
+    padding: 20px;
     cursor: pointer;
     color: blue;
 }
 
 .logo  h1{
     text-align: center;
-    font-size: 8rem;
+    font-size: 80px;
     width: auto;
-    height: 8rem;
-    letter-spacing: 0.2rem;
+    height: 80px;
+    letter-spacing: 2px;
     color: blue;
     font-family: "Comic Sons";
     text-decoration: none;
@@ -90,40 +90,43 @@ grid-area:
     color: blue;
 }
 
+.logo h1 a:hover{
+    color: orange;
+}
 
 .nav{
     display: grid;
     grid: nav;
     background: yellowgreen;
-    height: 5rem;
+    height: 50px;
     text-align: center;
     align-items: center;
 }
 
-.nav > ul{
+.nav ul{
     display: block;
     width: 100%;
     text-align: center;
 }
 
-.nav > ul > li{
+.nav ul li{
     display: inline;
-    padding: 5rem;
-    font-size: 2.5rem;
+    padding: 50px;
+    font-size: 18px;
+    font-family: "TrebuchetMS";
 }
 
-.nav > ul > li > a{
+.nav ul li a{
+    display: inline;
     color: whitesmoke;
-    font-family: "BebasNeue";
-    letter-spacing: 2px;
-    transition: all 500ms;
+    font-family: "";
     text-decoration: none;
-    transform: scale(1.4 1.4);
+    transition: all 200ms;
 }
 
-.nav > ul > li > a:hover{
+.nav ul li a:hover{
     color: #9c1414;
-    transform: scale(1.9, 1.9);
+    transform: scale(1.4, 1.4)
 }
 
 /*Articulos*/
@@ -202,6 +205,7 @@ table{
     display: grid;
     grid: aside;
     width: 300px;
+    height: 220px;
     font-family: "TrebuchetMS";
     margin: 20px;
 }
@@ -560,4 +564,48 @@ iframe{
     float: right;
 }
 
+/*animaciones, transiciones y/o transformaciones */
 
+.logo{
+    animation: logo 2s linear;
+    text-shadow: 2px 2px 1px black;
+}
+
+@keyframes logo{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
+
+.img__marca{
+    animation: marcas 3s linear;
+}
+
+@keyframes marcas{
+    0%{
+        transform: translateX(-400%) scale(0.3);
+    }
+    50%{
+        transform: translateX(400%) scale(1.7);
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+    }
+}
