@@ -66,12 +66,13 @@ grid-area:
 
 .logo{
     display: grid;
-    grid: head;
     width: 100%;
     text-align: center;
     padding: 20px;
     cursor: pointer;
     color: blue;
+    animation: logo 2s linear;
+    text-shadow: 2px 2px 1px black;
 }
 
 .logo  h1{
@@ -94,13 +95,36 @@ grid-area:
     color: orangered;
 }
 
+@keyframes logo{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
+
+/* NAVBAR*/
+
 .navbar{
     display: none;
 }
 
 .nav{
-    display: grid;
-    grid: nav;
     background: yellowgreen;
     height: 38.5px;
     text-align: center;
@@ -116,13 +140,11 @@ grid-area:
 .nav ul li{
     display: inline;
     padding: 50px;
-    font-size: 2.5rem;
-    font-family: "TrebuchetMS";
 }
 
 .nav ul li a{
     display: inline;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: whitesmoke;
     font-family: "BebasNeue";
     text-decoration: none;
@@ -131,14 +153,10 @@ grid-area:
 
 .nav ul li a:hover{
     color: orangered;
+    transform: scale(1.5, 1.5);
 }
 
 /*Articulos*/
-
-.contenido{
-    display: grid;
-    grid: contenido;
-}
 
 .main > section{
     width: auto;
@@ -146,7 +164,7 @@ grid-area:
 }
 
 .index__descripcion h3{
-    width: 70%;
+    width: 60%;
     font-size: 3rem;
     font-family: "BebasNeue";
 }
@@ -162,6 +180,7 @@ p{
     display: inline;
     width: 29.2%;
     height: 196px;
+    margin-top: -535px;
 }
 
 .index__marcas h3{
@@ -185,7 +204,6 @@ p{
     width: 60%;
     font-size: 3rem;
     font-family: "BebasNeue";
-
 }
 
 table{
@@ -208,14 +226,20 @@ table{
 #lateral{
     display: grid;
     grid: aside;
-    width: 300px;
+    width: 250px;
     height: 220px;
     font-family: "TrebuchetMS";
     margin: 20px;
 }
 
+#lateral form{
+    width: 223px;
+}
+
 .icon{
     font-family: "WebSymbolsRegular";
+    font-size: 1.5rem;
+    margin-left: 2px;
 }
 
 .aside h3{
@@ -249,7 +273,7 @@ table{
 }
 
 #lateral input[type="text"]{
-    width: 85%;
+    width: 79%;
     height: 30px;
     border: none;
     padding-left: 5px;
@@ -268,7 +292,7 @@ table{
     border: none;
     border-left: 1px solid #ccc;
     color: #555;
-    padding-left: 6px;
+    padding-left: 0px;
 }
 
 #lateral input[type="text"]:focus{
@@ -277,7 +301,7 @@ table{
 
 .aside-box{
     width: 85%;
-    height: 250px;
+    height: 215px;
     margin: 0px auto;
     margin-top: 0px;
     padding-top: 2px;
@@ -289,13 +313,11 @@ table{
 #login input[type="password"]{
     display: block;
     margin: 0px auto;
-    margin-top: 20px;
-    width: 82%;
+    width: 74%;
     height: 30px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #ccc inset;
     border-radius: 5px;
-    padding-left: 30px;
 }
 
 #login input[type="email"]:focus,
@@ -309,8 +331,7 @@ table{
     display: block;
     text-align: center;
     margin-left: 20px;
-    margin-top: 5px;
-    width: 200px;
+    margin-top: -25px;
     height: 30px;
 }
 
@@ -320,7 +341,7 @@ table{
 
 #login #password{
     margin-left: 21px;
-    margin-top: -20px;
+    margin-top: -28px;
     font-size: 2rem;
 }
 
@@ -330,9 +351,9 @@ table{
 #login input[type="reset"],
 #login button{
     text-align: center;
-    width: 100px;
+    width: 70px;
     height: 35px;
-    margin-top: 40px;
+    margin-top: 15px;
     color: white;
     background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
     border: 1px solid #156785;
@@ -356,7 +377,7 @@ table{
     display: block;
     font-size: 1.4rem;
     text-decoration: none;
-    margin-left: 18px;
+    margin-left: 2px;
     color: #555;
 }
 
@@ -386,8 +407,8 @@ table{
     font-weight: bold;
     letter-spacing: 1px;
     position: absolute;
-    margin-left: 70px;
-    margin-top: -52px;
+    margin-left: 65px;
+    margin-top: -60px;
     cursor: pointer;
     transform: translateX(-50%);
     opacity: 0;
@@ -438,6 +459,8 @@ table{
     color: aqua;
     font-size: 2rem;
     text-decoration: none;
+    font-family: BebasNeue;
+    letter-spacing: 1px;
 }
 
 .contacto_footer{
@@ -445,6 +468,12 @@ table{
     width: 33%;
     font-size: 2rem;
     color: aqua;
+}
+
+.contacto_footer p{
+    font-size: 2rem;
+    font-family: BebasNeue;
+    margin-bottom: 0px;
 }
 
 .contacto_footer h5{
@@ -579,34 +608,6 @@ iframe{
 
 /*animaciones, transiciones y/o transformaciones */
 
-.logo{
-    animation: logo 2s linear;
-    text-shadow: 2px 2px 1px black;
-}
-
-@keyframes logo{
-    0%{
-        transform: translateX(-600%) scale(5,5);
-        opacity: 1;
-    }
-    50%{
-        transform: translateX(600%) scale(5,5);
-        opacity: 1;
-    }
-    75%{
-        transform: translateX(-600%) scale(5,5);
-        text-shadow: none;
-        color: transparent;
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0%) scale(1,1);
-        text-shadow: 2px 2px 1px black;
-        color: white;
-        opacity: 1;
-    }
-}
-
 .img__marca{
     animation: marcas 3s linear;
 }
@@ -624,7 +625,7 @@ iframe{
 }
 
 /*Media Querys*/
-
+/*
 @media (max-width: 992px){
     .nav ul li{
         padding: 30px;
@@ -697,4 +698,4 @@ iframe{
     .footer{
         display: none;
     }
-}
+}*/
