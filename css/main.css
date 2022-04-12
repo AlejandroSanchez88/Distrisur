@@ -538,7 +538,7 @@ iframe{
 /* Sucursales */
 
 .main__sucursales p{
-    margin-top: 15px;
+    margin-top: -15px;
 }
 
 .main__sucursales h3{
@@ -566,6 +566,20 @@ iframe{
     width: 48%;
 }
 
+.main__ingreso form{
+    font-size: 2rem;
+    color: #333;
+    font-family: TrebuchetMS;
+}
+
+.main__ingreso form input{
+    font-size: 2rem;
+}
+
+.pass-login{
+    margin-left: 8px;
+}
+
 .registro__clientes{
     float: left;
     display: block;
@@ -583,10 +597,10 @@ iframe{
 
 /* Contacto */
 
-.form__contacto{
+.form__contacto form{
     float: left;
     width: 50%;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 .main__contacto h3{
@@ -625,7 +639,7 @@ iframe{
 }
 
 /*Media Querys*/
-/*
+
 @media (max-width: 992px){
     .nav ul li{
         padding: 30px;
@@ -647,7 +661,7 @@ iframe{
         padding: 20px;
     }
     .nav ul li a{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     #lateral{
@@ -656,10 +670,11 @@ iframe{
 
     .contacto_footer p{
         font-size: 1.5rem;
+        letter-spacing: 1px;
     }
 
     iframe {
-        width: 250px;
+        width: 220px;
         height: 100px;
     }
 }
@@ -698,4 +713,4 @@ iframe{
     .footer{
         display: none;
     }
-}*/
+}
