@@ -129,6 +129,7 @@ grid-area:
     height: 38.5px;
     text-align: center;
     align-items: center;
+    margin-left: 15px;
 }
 
 .nav ul{
