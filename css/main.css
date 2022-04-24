@@ -1,81 +1,59 @@
-/*Fuentes*/
+/* Fuentes */
+@font-face {
+  font-family: "TrebuchetMS";
+  src: url("../fonts/TrebuchetMS.ttf");
+  font-weight: normal;
+  font-style: normal; }
 
-@font-face{
-    font-family: "TrebuchetMS";
-    src: url('../fonts/TrebuchetMS.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue.otf");
+  font-weight: normal;
+  font-style: normal; }
 
-@font-face{
-    font-family: "BebasNeue";
-    src: url('../fonts/BebasNeue.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: "WebSymbolsRegular";
-    src: url('../fonts/websymbols-regular-webfont.eot');
-    src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/websymbols-regular-webfont.woff') format('woff'),
-         url('../fonts/websymbols-regural-webfont.ttf') format('truetype'),
-         url('../fonts/websymbols-regural-webfont.svg#WebSymbolRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url("../fonts/websymbols-regular-webfont.eot");
+  src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/websymbols-regular-webfont.woff") format("woff"), url("../fonts/websymbols-regural-webfont.ttf") format("truetype"), url("../fonts/websymbols-regural-webfont.svg#WebSymbolRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 /*Generales*/
-*{
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 62.5%;
-    /*border: red dotted 1px;*/
-}
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-size: 62.5%;
+  /*border: red dotted 1px;*/ }
 
-body{
-    background: url("../img/pattern.png");  
-}
+body {
+  background: url("../img/pattern.png"); }
 
-.container{
-grid-area:
-"head"
-"nav"
-"contenido contenido aside"
-"atencion atencion aside"
-"footer";
-}
+.container {
+  grid-area: "head" "nav" "contenido contenido aside" "atencion atencion aside" "footer"; }
 
+.main {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  width: 100%;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 15px; }
 
-.main{
-    display: grid;
-    justify-items: stretch;
-    align-items: stretch;
-    width: 100%;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 15px;
-}
+.clearfix {
+  float: none;
+  clear: both; }
 
-.clearfix{
-    float: none;
-    clear: both;
-}
-
-/*Cabecera*/
-
-.logo{
-    display: grid;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    cursor: pointer;
-    color: blue;
-    animation: logo 2s linear;
-    text-shadow: 2px 2px 1px black;
-}
-
-.logo  h1{
+.logo {
+  display: grid;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  color: blue;
+  animation: logo 2s linear;
+  text-shadow: 2px 2px 1px black; }
+  .logo h1 {
     text-align: center;
     font-size: 8rem;
     width: auto;
@@ -83,325 +61,270 @@ grid-area:
     letter-spacing: 2px;
     color: blue;
     font-family: "Comic Sons";
-    text-decoration: none;
-}
+    text-decoration: none; }
+    .logo h1 a {
+      text-decoration: none;
+      color: blue; }
+    .logo h1 a:hover {
+      color: orangered; }
 
-.logo  h1 a{
-    text-decoration: none;
-    color: blue;
-}
-
-.logo h1 a:hover{
-    color: orangered;
-}
-
-@keyframes logo{
-    0%{
-        transform: translateX(-600%) scale(5,5);
-        opacity: 1;
-    }
-    50%{
-        transform: translateX(600%) scale(5,5);
-        opacity: 1;
-    }
-    75%{
-        transform: translateX(-600%) scale(5,5);
-        text-shadow: none;
-        color: transparent;
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0%) scale(1,1);
-        text-shadow: 2px 2px 1px black;
-        color: white;
-        opacity: 1;
-    }
-}
+@keyframes logo {
+  0% {
+    transform: translateX(-600%) scale(5, 5);
+    opacity: 1; }
+  50% {
+    transform: translateX(600%) scale(5, 5);
+    opacity: 1; }
+  75% {
+    transform: translateX(-600%) scale(5, 5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0; }
+  100% {
+    transform: translateX(0%) scale(1, 1);
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    opacity: 1; } }
 
 /* NAVBAR*/
+.navbar {
+  display: none; }
 
-.navbar{
-    display: none;
-}
-
-.nav{
-    background: yellowgreen;
-    height: 38.5px;
-    text-align: center;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.nav ul{
+.nav {
+  background: yellowgreen;
+  height: 38.5px;
+  text-align: center;
+  align-items: center;
+  margin-left: 15px; }
+  .nav ul {
     display: block;
     width: 100%;
-    text-align: center;
-}
-
-.nav ul li{
-    display: inline;
-    padding: 50px;
-}
-
-.nav ul li a{
-    display: inline;
-    font-size: 2.1rem;
-    color: whitesmoke;
-    font-family: "BebasNeue";
-    text-decoration: none;
-    transition: all 200ms;
-}
-
-.nav ul li a:hover{
-    color: orangered;
-    transform: scale(1.5, 1.5);
-}
+    text-align: center; }
+    .nav ul li {
+      display: inline;
+      padding: 50px; }
+      .nav ul li a {
+        display: inline;
+        font-size: 2.1rem;
+        color: whitesmoke;
+        font-family: "BebasNeue";
+        text-decoration: none;
+        transition: all 200ms; }
+      .nav ul li a:hover {
+        color: orangered;
+        transform: scale(1.5, 1.5); }
 
 /*Articulos*/
+.main > section {
+  width: auto;
+  height: 700px; }
 
-.main > section{
-    width: auto;
-    height: 700px;
-}
+.index__descripcion h3 {
+  width: 60%;
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-.index__descripcion h3{
-    width: 60%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
+p {
+  display: inline-block;
+  width: 70%;
+  height: auto;
+  font-size: 2.5rem; }
 
-p{
-    display: inline-block;
-    width: 70%;
-    height: auto;
-    font-size: 2.5rem;
-}
+#img__depo1 {
+  display: inline;
+  width: 29.2%;
+  height: 196px;
+  margin-top: -535px; }
 
-#img__depo1{
-    display: inline;
-    width: 29.2%;
-    height: 196px;
-    margin-top: -535px;
-}
+.index__marcas h3 {
+  width: 70%;
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-.index__marcas h3{
-    width: 70%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
-
-#marcas-logo{
-    display: flex;
-    width: 100%;
-}
+#marcas-logo {
+  display: flex;
+  width: 100%; }
 
 .img__marcas {
-    width: 33.3%;
-    height: 250px;
-    background: whitesmoke;
-}
+  width: 33.3%;
+  height: 250px;
+  background: whitesmoke; }
 
-.atencion h3{
-    width: 60%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
+.atencion h3 {
+  width: 60%;
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-table{
-    font-size: 15rem;
-    width: 750px;
-    height: 320px;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background: whitesmoke;
-}
+table {
+  font-size: 15rem;
+  width: 750px;
+  height: 320px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background: whitesmoke; }
 
-.img__contact2{
-    width: 100%;
-    height: 250px;
-}
+.img__contact2 {
+  width: 100%;
+  height: 250px; }
 
 /*Barra Lateral*/
+#lateral {
+  display: grid;
+  grid: aside;
+  width: 250px;
+  height: 220px;
+  font-family: "TrebuchetMS";
+  margin: 20px; }
 
-#lateral{
-    display: grid;
-    grid: aside;
-    width: 250px;
-    height: 220px;
-    font-family: "TrebuchetMS";
-    margin: 20px;
-}
+#lateral form {
+  width: 223px; }
 
-#lateral form{
-    width: 223px;
-}
+.icon {
+  font-family: "WebSymbolsRegular";
+  font-size: 1.5rem;
+  margin-left: 2px; }
 
-.icon{
-    font-family: "WebSymbolsRegular";
-    font-size: 1.5rem;
-    margin-left: 2px;
-}
+.aside h3 {
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 49px;
+  background: url(../img/pxgray.png), white;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  font-size: 3rem;
+  font-family: "BebasNeue";
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px; }
 
-.aside h3{
-    display: block;
-    width: auto;
-    height: 45px;
-    line-height: 49px;
-    background: url(../img/pxgray.png), white;
-    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-    font-weight: normal;
-    letter-spacing: 2px;
-    padding-left: 15px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
+.password {
+  font-size: 2rem; }
 
-.password{
-    font-size: 2rem;
-}
+#search {
+  width: 90%;
+  height: 30px;
+  margin: 10px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px inset;
+  font-size: 2rem; }
 
-#search{
-    width: 90%;
-    height: 30px;
-    margin: 10px auto;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px inset;
-}
-
-#lateral input[type="text"]{
-    width: 79%;
-    height: 30px;
-    border: none;
-    padding-left: 5px;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #ccc;
-    transition: all 300ms;
-}
+#lateral input[type="text"] {
+  width: 79%;
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
+  transition: all 300ms; }
 
 #lateral input[type="button"],
-#lateral input[type="submit"]{
-    height: 30px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-    border-left: 1px solid #ccc;
-    color: #555;
-    padding-left: 0px;
-}
+#lateral input[type="submit"] {
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #555;
+  padding-left: 0px; }
 
-#lateral input[type="text"]:focus{
-    color: #555;
-}
+#lateral input[type="text"]:focus {
+  color: #555; }
 
-.aside-box{
-    width: 85%;
-    height: 215px;
-    margin: 0px auto;
-    margin-top: 0px;
-    padding-top: 2px;
-    background: white;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
-}
+.aside-box {
+  width: 85%;
+  height: 215px;
+  margin: 0px auto;
+  margin-top: 0px;
+  padding-top: 2px;
+  background: white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset; }
 
 #login input[type="email"],
-#login input[type="password"]{
-    display: block;
-    margin: 0px auto;
-    width: 74%;
-    height: 30px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #ccc inset;
-    border-radius: 5px;
-}
+#login input[type="password"] {
+  display: block;
+  margin: 0px auto;
+  width: 74%;
+  height: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc inset;
+  border-radius: 5px; }
 
 #login input[type="email"]:focus,
-#login input[type="password"]:focus{
-    color: #555;
-    box-shadow: 1px 1px 1px gray inset;
-}
+#login input[type="password"]:focus {
+  color: #555;
+  box-shadow: 1px 1px 1px gray inset; }
 
 #login #user,
-#login #password{
-    display: block;
-    text-align: center;
-    margin-left: 20px;
-    margin-top: -25px;
-    height: 30px;
-}
+#login #password {
+  display: block;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: -25px;
+  height: 30px;
+  font-size: 2rem; }
 
-#user, #password{
-    margin-top: 5px;
-}
+#user, #password {
+  margin-top: 5px; }
 
-#login #password{
-    margin-left: 21px;
-    margin-top: -28px;
-    font-size: 2rem;
-}
+#login #password {
+  margin-left: 21px;
+  margin-top: -28px;
+  font-size: 2rem; }
 
 #btm,
 #login input[type="submit"],
 #login input[type="button"],
 #login input[type="reset"],
-#login button{
-    text-align: center;
-    width: 70px;
-    height: 35px;
-    margin-top: 15px;
-    color: white;
-    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
-    border: 1px solid #156785;
-    border-radius: 0px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-family: "TrebuchetMS";
-    margin-left: 17px;
-    margin-bottom: 20px;
-    transition: all 300ms;
-}
+#login button {
+  text-align: center;
+  width: 70px;
+  height: 35px;
+  margin-top: 15px;
+  color: white;
+  background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+  border: 1px solid #156785;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "TrebuchetMS";
+  margin-left: 17px;
+  margin-bottom: 20px;
+  transition: all 300ms; }
 
 #login input[type="submit"]:hover,
 #login input[type="button"]:hover,
 #login input[type="reset"]:hover,
-#login button:hover{
-    box-shadow: 0px 0px 3px gray;
-}
+#login button:hover {
+  box-shadow: 0px 0px 3px gray; }
 
-#login a{
-    display: block;
-    font-size: 1.4rem;
-    text-decoration: none;
-    margin-left: 2px;
-    color: #555;
-}
-
-#login a:hover{
+#login a {
+  display: block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-left: 2px;
+  color: #555; }
+  #login a :hover {
     text-decoration: underline;
-    color: #2f78bc;    
-}
+    color: #2f78bc; }
 
-#social{
-    height: 200px;
-}
-
-#social a{
+#social {
+  height: 200px; }
+  #social a {
     display: block;
     color: black;
     text-decoration: none;
     font-size: 3rem;
     margin-left: 20px;
     margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-#social .overlay{
+    margin-bottom: 20px; }
+  #social .overlay {
     display: block;
     height: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -413,315 +336,229 @@ table{
     cursor: pointer;
     transform: translateX(-50%);
     opacity: 0;
-    transition: all 150ms;
-}
+    transition: all 150ms; }
+  #social .twitter {
+    color: #1d9bf0; }
+  #social .facebook {
+    color: #2962ff; }
+  #social .youtube {
+    color: red; }
 
-#social div:hover .overlay{
-    opacity: 1;
-    transform: translateX(0%);
-}
-
-#social .twitter{
-    color: #1d9bf0;
-}
-
-#social .facebook{
-    color: #2962ff;
-}
-
-#social .youtube{
-    color: red;
-}
+#social div:hover .overlay {
+  opacity: 1;
+  transform: translateX(0%); }
 
 /* Footer */
+.footer {
+  display: flex;
+  grid: footer;
+  width: 100%;
+  height: auto;
+  background-color: rgba(78, 73, 73, 0.726);
+  color: white; }
 
-.footer{
-    display: flex;
-    grid: footer;
-    width: 100%;
-    height: auto;
-    background-color: rgba(78, 73, 73, 0.726);
-    color: white;
-}
-
-.menu__footer{
-    display: block;
-    width: 33%;
-    height: auto;
-    font-size: 2rem;
-}
-
-.menu__footer h5{
+.menu__footer {
+  display: block;
+  width: 33%;
+  height: auto;
+  font-size: 2rem; }
+  .menu__footer h5 {
     font-size: 3rem;
-    color: blue;
-}
-
-.menu__footer a{
+    color: blue; }
+  .menu__footer a {
     color: aqua;
     font-size: 2rem;
     text-decoration: none;
     font-family: BebasNeue;
     letter-spacing: 1px;
-}
+    text-decoration: none; }
 
-.contacto_footer{
-    display: block;
-    width: 33%;
-    font-size: 2rem;
-    color: aqua;
-}
-
-.contacto_footer p{
+.contacto_footer {
+  display: block;
+  width: 33%;
+  font-size: 2rem;
+  color: aqua; }
+  .contacto_footer p {
     font-size: 2rem;
     font-family: BebasNeue;
-    margin-bottom: 0px;
-}
-
-.contacto_footer h5{
+    margin-bottom: 0px; }
+  .contacto_footer h5 {
     font-size: 3rem;
-    color: blue;
-}
+    color: blue; }
 
-.location_footer{
-    width: 33%;
-}
-
-.location_footer h5{
+.location_footer {
+  width: 33%; }
+  .location_footer h5 {
     font-size: 3rem;
-    color: blue;
-}
+    color: blue; }
 
-iframe{
-    width: auto;
-    height: 150px;
-}
+iframe {
+  width: auto;
+  height: 150px; }
 
 /* La Empresa */
+.main__laempresa h3 {
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-.main__laempresa h3{
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
-
-.main__laempresa p{
-    width: 98%;
-    font-size: 2.5rem;
-}
+.main__laempresa p {
+  width: 98%;
+  font-size: 2.5rem; }
 
 .img__laempresa {
-    display: inline-block;
-}
+  display: inline-block; }
 
-.img__laempresa img{
-    width: 48%;
-    height: 250px;
-    margin-top: 5px;
-    margin-left: 2px;
-}
+.img__laempresa img {
+  width: 48%;
+  height: 250px;
+  margin-top: 5px;
+  margin-left: 2px; }
 
 /* Nuestras Marcas */
+.main__marcas h3 {
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-.main__marcas h3{
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
+.img__marca {
+  display: inline-block;
+  width: 100%; }
 
-.img__marca{
-    display: inline-block;
-    width: 100%;
-}
-
-.img__marca > img{
-    width: 33%;
-    height: 200px;
-}
+.img__marca > img {
+  width: 33%;
+  height: 200px; }
 
 /* Sucursales */
+.main__sucursales p {
+  margin-top: -15px; }
 
-.main__sucursales p{
-    margin-top: -15px;
-}
-
-.main__sucursales h3{
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
+.main__sucursales h3 {
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
 /* Ingreso Clientes */
+.main__ingreso {
+  width: 100%;
+  height: auto;
+  background: transparent; }
 
-.main__ingreso{
-    width: 100%;
-    height: auto;
-    background: transparent;
-}
+.main__ingreso > article {
+  display: inline-block;
+  width: 49.5%;
+  height: auto; }
 
-.main__ingreso > article{
-    display: inline-block;
-    width: 49.5%;
-    height: auto;
-}
+.main__ingreso h3 {
+  font-size: 3rem;
+  font-family: "BebasNeue";
+  width: 48%; }
 
-.main__ingreso h3{
-    font-size: 3rem;
-    font-family: "BebasNeue";
-    width: 48%;
-}
+.main__ingreso form {
+  font-size: 2rem;
+  color: #333;
+  font-family: TrebuchetMS; }
 
-.main__ingreso form{
-    font-size: 2rem;
-    color: #333;
-    font-family: TrebuchetMS;
-}
+.main__ingreso form input {
+  font-size: 2rem; }
 
-.main__ingreso form input{
-    font-size: 2rem;
-}
+.pass-login {
+  margin-left: 8px; }
 
-.pass-login{
-    margin-left: 8px;
-}
+.registro__clientes {
+  float: left;
+  display: block;
+  font-size: 5rem;
+  letter-spacing: 1px; }
 
-.registro__clientes{
-    float: left;
-    display: block;
-    font-size: 5rem;
-    letter-spacing: 1px;
-}
-
-.login__clientes{
-    display: block;
-    float: right;
-    font-size: 4rem;
-    letter-spacing: 1px;
-
-}
+.login__clientes {
+  display: block;
+  float: right;
+  font-size: 4rem;
+  letter-spacing: 1px; }
 
 /* Contacto */
+.form__contacto form {
+  float: left;
+  width: 50%;
+  font-size: 2rem; }
 
-.form__contacto form{
-    float: left;
-    width: 50%;
-    font-size: 2rem;
-}
+.main__contacto h3 {
+  width: 30%;
+  font-size: 3rem;
+  font-family: "BebasNeue"; }
 
-.main__contacto h3{
-    width: 30%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
+.main__contacto input {
+  margin: 5px;
+  padding: 5px; }
 
-.main__contacto input{
-    margin: 5px;
-    padding: 5px;
-}
-
-.img__contacto{
-    margin-top: 37px;
-    width: 50%;
-    float: right;
-}
+.img__contacto {
+  margin-top: 37px;
+  width: 50%;
+  float: right; }
 
 /*animaciones, transiciones y/o transformaciones */
+.img__marca {
+  animation: marcas 3s linear; }
 
-.img__marca{
-    animation: marcas 3s linear;
-}
-
-@keyframes marcas{
-    0%{
-        transform: translateX(-400%) scale(0.3);
-    }
-    50%{
-        transform: translateX(400%) scale(1.7);
-    }
-    100%{
-        transform: translateX(0%) scale(1,1);
-    }
-}
+@keyframes marcas {
+  0% {
+    transform: translateX(-400%) scale(0.3); }
+  50% {
+    transform: translateX(400%) scale(1.7); }
+  100% {
+    transform: translateX(0%) scale(1, 1); } }
 
 /*Media Querys*/
+@media (max-width: 992px) {
+  .nav ul li {
+    padding: 30px; }
+  .contenido section {
+    width: 700px; }
+  table {
+    width: 690px; }
+  #lateral.aside {
+    position: absolute;
+    margin-left: 700px; } }
 
-@media (max-width: 992px){
-    .nav ul li{
-        padding: 30px;
-    }
-    .contenido section{
-        width: 700px;
-    }
-    table{
-        width: 690px;
-    }
-    #lateral.aside{
-        position: absolute;
-        margin-left: 700px;
-    }
-}
+@media (max-width: 768px) {
+  .nav ul li {
+    padding: 20px; }
+  .nav ul li a {
+    font-size: 1.7rem; }
+  #lateral {
+    display: none; }
+  .contacto_footer p {
+    font-size: 1.5rem;
+    letter-spacing: 1px; }
+  iframe {
+    width: 220px;
+    height: 100px; }
+  .img__contacto {
+    width: 45%;
+    margin-top: 0px; } }
 
-@media (max-width: 768px){
-    .nav ul li{
-        padding: 20px;
-    }
-    .nav ul li a{
-        font-size: 1.7rem;
-    }
-
-    #lateral{
-        display: none;
-    }
-
-    .contacto_footer p{
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-    }
-
-    iframe {
-        width: 220px;
-        height: 100px;
-    }
-
-    .img__contacto{
-        width: 45%;
-        margin-top: 0px;
-    }
-}
-
-@media (max-width: 576px){
-    .logo{
-        width: 400px;
-    }
-    .logo h1{
-        width: 400px;
-    }
-    .logo h1 a{
-        float: left;
-    }
-    .nav{
-        display: none;
-    }
-    .navbar {
-        display: block;
-        float: right;
-        width: 50px;
-        margin-top: -93px;
-        margin-right: 40px;
-        border: 3px solid black;
-        cursor: pointer;
-    }
-
-    .navbar:hover{
-        display: block;
-    }
-
-    .navbar:focus{
-        display: block;
-    }
-    .contenido section{
-        width: 500px;
-    }
-    table{
-        width: 500px;
-    }
-    .footer{
-        display: none;
-    }
-}
+@media (max-width: 576px) {
+  .logo {
+    width: 400px; }
+  .logo h1 {
+    width: 400px; }
+  .logo h1 a {
+    float: left; }
+  .nav {
+    display: none; }
+  .navbar {
+    display: block;
+    float: right;
+    width: 50px;
+    margin-top: -93px;
+    margin-right: 40px;
+    border: 3px solid black;
+    cursor: pointer; }
+  .navbar:hover {
+    display: block; }
+  .navbar:focus {
+    display: block; }
+  .contenido section {
+    width: 500px; }
+  table {
+    width: 500px; }
+  .footer {
+    display: none; } }

@@ -1,0 +1,55 @@
+/* Footer */
+
+.footer{
+    display: flex;
+    grid: footer;
+    width: 100%;
+    height: auto;
+    background-color: rgba(78, 73, 73, 0.726);
+    color: white;
+}
+
+.menu__footer{
+    display: block;
+    width: 33%;
+    height: auto;
+    font-size: 2rem;
+    h5{
+        font-size: 3rem;
+        color: blue;     
+    }
+    a{
+        color: aqua;
+        font-size: 2rem;
+        text-decoration: none;
+        font-family: BebasNeue;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+}
+.contacto_footer{
+    display: block;
+    width: 33%;
+    font-size: 2rem;
+    color: aqua;
+    p{
+        font-size: 2rem;
+        font-family: BebasNeue;
+        margin-bottom: 0px;
+    }
+    h5{
+        font-size: 3rem;
+        color: blue;    
+    }
+}
+.location_footer{
+    width: 33%;
+    h5{
+        font-size: 3rem;
+        color: blue;    
+    }
+}
+iframe{
+    width: auto;
+    height: 150px;
+}

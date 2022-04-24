@@ -1,0 +1,36 @@
+/*Generales*/
+*{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 62.5%;
+    /*border: red dotted 1px;*/
+}
+
+body{
+    background: url("../img/pattern.png");  
+}
+
+.container{
+grid-area:
+"head"
+"nav"
+"contenido contenido aside"
+"atencion atencion aside"
+"footer";
+}
+
+
+.main{
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    width: 100%;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 15px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}

@@ -1,0 +1,50 @@
+.logo{
+    display: grid;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    color: blue;
+    animation: logo 2s linear;
+    text-shadow: 2px 2px 1px black;
+    h1{
+        text-align: center;
+        font-size: 8rem;
+        width: auto;
+        height: 80px;
+        letter-spacing: 2px;
+        color: blue;
+        font-family: "Comic Sons";
+        text-decoration: none;
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover{
+            color: orangered;
+        }
+    }
+}
+
+@keyframes logo{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}

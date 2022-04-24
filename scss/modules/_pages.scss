@@ -1,0 +1,229 @@
+/* La Empresa */
+
+.main__laempresa h3{
+    font-size: 3rem;
+    font-family: "BebasNeue";
+}
+
+.main__laempresa p{
+    width: 98%;
+    font-size: 2.5rem;
+}
+
+.img__laempresa {
+    display: inline-block;
+}
+
+.img__laempresa img{
+    width: 48%;
+    height: 250px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+/* Nuestras Marcas */
+
+.main__marcas h3{
+    font-size: 3rem;
+    font-family: "BebasNeue";
+}
+
+.img__marca{
+    display: inline-block;
+    width: 100%;
+}
+
+.img__marca > img{
+    width: 33%;
+    height: 200px;
+}
+
+/* Sucursales */
+
+.main__sucursales p{
+    margin-top: -15px;
+}
+
+.main__sucursales h3{
+    font-size: 3rem;
+    font-family: "BebasNeue";
+}
+
+/* Ingreso Clientes */
+
+.main__ingreso{
+    width: 100%;
+    height: auto;
+    background: transparent;
+}
+
+.main__ingreso > article{
+    display: inline-block;
+    width: 49.5%;
+    height: auto;
+}
+
+.main__ingreso h3{
+    font-size: 3rem;
+    font-family: "BebasNeue";
+    width: 48%;
+}
+
+.main__ingreso form{
+    font-size: 2rem;
+    color: #333;
+    font-family: TrebuchetMS;
+}
+
+.main__ingreso form input{
+    font-size: 2rem;
+}
+
+.pass-login{
+    margin-left: 8px;
+}
+
+.registro__clientes{
+    float: left;
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1px;
+}
+
+.login__clientes{
+    display: block;
+    float: right;
+    font-size: 4rem;
+    letter-spacing: 1px;
+
+}
+
+/* Contacto */
+
+.form__contacto form{
+    float: left;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.main__contacto h3{
+    width: 30%;
+    font-size: 3rem;
+    font-family: "BebasNeue";
+}
+
+.main__contacto input{
+    margin: 5px;
+    padding: 5px;
+}
+
+.img__contacto{
+    margin-top: 37px;
+    width: 50%;
+    float: right;
+}
+
+/*animaciones, transiciones y/o transformaciones */
+
+.img__marca{
+    animation: marcas 3s linear;
+}
+
+@keyframes marcas{
+    0%{
+        transform: translateX(-400%) scale(0.3);
+    }
+    50%{
+        transform: translateX(400%) scale(1.7);
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+    }
+}
+
+/*Media Querys*/
+
+@media (max-width: 992px){
+    .nav ul li{
+        padding: 30px;
+    }
+    .contenido section{
+        width: 700px;
+    }
+    table{
+        width: 690px;
+    }
+    #lateral.aside{
+        position: absolute;
+        margin-left: 700px;
+    }
+}
+
+@media (max-width: 768px){
+    .nav ul li{
+        padding: 20px;
+    }
+    .nav ul li a{
+        font-size: 1.7rem;
+    }
+
+    #lateral{
+        display: none;
+    }
+
+    .contacto_footer p{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    iframe {
+        width: 220px;
+        height: 100px;
+    }
+
+    .img__contacto{
+        width: 45%;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 576px){
+    .logo{
+        width: 400px;
+    }
+    .logo h1{
+        width: 400px;
+    }
+    .logo h1 a{
+        float: left;
+    }
+    .nav{
+        display: none;
+    }
+    .navbar {
+        display: block;
+        float: right;
+        width: 50px;
+        margin-top: -93px;
+        margin-right: 40px;
+        border: 3px solid black;
+        cursor: pointer;
+    }
+
+    .navbar:hover{
+        display: block;
+    }
+
+    .navbar:focus{
+        display: block;
+    }
+    .contenido section{
+        width: 500px;
+    }
+    table{
+        width: 500px;
+    }
+    .footer{
+        display: none;
+    }
+}
