@@ -2,72 +2,7 @@
 @import "modules/_generales.scss";
 @import "modules/_logo.scss";
 @import "modules/_navbar.scss";
-
-/*Articulos*/
-
-.main > section{
-    width: auto;
-    height: 700px;
-}
-
-.index__descripcion h3{
-    width: 60%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
-
-p{
-    display: inline-block;
-    width: 70%;
-    height: auto;
-    font-size: 2.5rem;
-}
-
-#img__depo1{
-    display: inline;
-    width: 29.2%;
-    height: 196px;
-    margin-top: -535px;
-}
-
-.index__marcas h3{
-    width: 70%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
-
-#marcas-logo{
-    display: flex;
-    width: 100%;
-}
-
-.img__marcas {
-    width: 33.3%;
-    height: 250px;
-    background: whitesmoke;
-}
-
-.atencion h3{
-    width: 60%;
-    font-size: 3rem;
-    font-family: "BebasNeue";
-}
-
-table{
-    font-size: 15rem;
-    width: 750px;
-    height: 320px;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background: whitesmoke;
-}
-
-.img__contact2{
-    width: 100%;
-    height: 250px;
-}
-
+@import "modules/_index.scss";
 @import "modules/_aside.scss";
 @import "modules/_footer.scss";
 @import "modules/_pages.scss";
