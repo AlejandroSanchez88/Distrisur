@@ -87,11 +87,8 @@ body {
     opacity: 1; } }
 
 /* NAVBAR*/
-.navbar {
-  display: none; }
-
 .nav {
-  background: yellowgreen;
+  background: #555;
   height: 38.5px;
   text-align: center;
   align-items: center;
@@ -543,19 +540,11 @@ iframe {
   .logo h1 a {
     float: left; }
   .nav {
-    display: none; }
-  .navbar {
-    display: block;
-    float: right;
-    width: 50px;
-    margin-top: -93px;
-    margin-right: 40px;
-    border: 3px solid black;
-    cursor: pointer; }
-  .navbar:hover {
-    display: block; }
-  .navbar:focus {
-    display: block; }
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    height: auto; }
   .contenido section {
     width: 500px; }
   table {

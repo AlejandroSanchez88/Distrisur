@@ -1,0 +1,74 @@
+/*Media Querys*/
+
+@media (max-width: 992px){
+    .nav ul li{
+        padding: 30px;
+    }
+    .contenido section{
+        width: 700px;
+    }
+    table{
+        width: 690px;
+    }
+    #lateral.aside{
+        position: absolute;
+        margin-left: 700px;
+    }
+}
+
+@media (max-width: 768px){
+    .nav ul li{
+        padding: 20px;
+    }
+    .nav ul li a{
+        font-size: 1.7rem;
+    }
+
+    #lateral{
+        display: none;
+    }
+
+    .contacto_footer p{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    iframe {
+        width: 220px;
+        height: 100px;
+    }
+
+    .img__contacto{
+        width: 45%;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 576px){
+    .logo{
+        width: 400px;
+    }
+    .logo h1{
+        width: 400px;
+    }
+    .logo h1 a{
+        float: left;
+    }
+
+    .nav{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        font-size: 30px;
+        height: auto;
+    }
+    .contenido section{
+        width: 500px;
+    }
+    table{
+        width: 500px;
+    }
+    .footer{
+        display: none;
+    }
+}
