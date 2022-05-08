@@ -2,7 +2,7 @@
 
 @media (max-width: 992px){
     .nav ul li{
-        padding: 30px;
+        padding: 20px;
     }
     .contenido section{
         width: 700px;
@@ -17,13 +17,19 @@
 }
 
 @media (max-width: 768px){
+    .nav{
+        width: 100%;
+    }
+
     .nav ul li{
         padding: 20px;
     }
     .nav ul li a{
         font-size: 1.7rem;
     }
-
+    .container{
+        width: 100%;
+    }
     #lateral{
         display: none;
     }
@@ -57,11 +63,15 @@
 
     .nav{
         text-align: center;
-        padding: 10px;
-        margin: 10px;
-        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 10px;
         height: auto;
     }
+    .nav ul li{
+        padding: 9px;
+    }
+
     .contenido section{
         width: 500px;
     }
@@ -70,5 +80,41 @@
     }
     .footer{
         display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .logo h1 a{
+        float: left;
+        padding: 0px auto;
+    }
+
+    .nav{
+        display: flex;
+        float: right;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+        font-size: 25px;
+        height: auto;
+    }
+
+    .nav ul li{
+        padding: 0px;
+    }
+
+    #img__depo1{
+        display: none;
+    }
+    
+    .img__contacto{
+        display: none;
+    }
+
+    .contenido section{
+        width: 450px;
+    }
+    table{
+        width: 450px;
     }
 }
